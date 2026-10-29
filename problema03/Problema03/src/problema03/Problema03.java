@@ -1,0 +1,52 @@
+import java.util.Scanner;
+import java.util.Locale;
+
+public class Problema03 {
+
+    public static void main(String[] args) {
+        
+        Scanner entrada = new Scanner(System.in);
+        entrada.useLocale(Locale.US);
+
+        // Declarar las variables
+        String titular;
+        String direccion;
+        double costoPorMinuto;
+        double minutosConsumidos;
+        double valorTotal;
+
+        // Pedir los datos
+        System.out.println("Ingrese el nombre del titular:");
+        titular = entrada.nextLine();
+        
+        System.out.println("Ingrese la dirección:");
+        direccion = entrada.nextLine();
+        
+        System.out.println("Ingrese el costo por minuto:");
+        costoPorMinuto = entrada.nextDouble();
+        
+        System.out.println("Ingrese los minutos consumidos:");
+        minutosConsumidos = entrada.nextDouble();
+
+        // Calcular el total
+        valorTotal = costoPorMinuto * minutosConsumidos;
+
+        // Imprimir el reporte con el formato exacto
+        System.out.printf("===================================================\n"
+                + "PLANILLA DE SERVICIO TELEFÓNICO\n"
+                + "===================================================\n"
+                + "Titular: %s\n"
+                + "Dirección: %s\n"
+                + "---------------------------------------------------\n"
+                + "Costo por minuto: $%.2f\n"
+                + "Minutos consumidos: %.0f\n"
+                + "---------------------------------------------------\n"
+                + "VALOR TOTAL A PAGAR: $%.2f\n"
+                + "===================================================\n", 
+                titular, 
+                direccion, 
+                costoPorMinuto, 
+                minutosConsumidos, 
+                valorTotal);
+    }
+}
