@@ -8,7 +8,6 @@ public class Problema01 {
 
     public static void main(String[] args) {
         
-        // Inicializamos el Scanner
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
 
@@ -50,6 +49,7 @@ public class Problema01 {
                 + "2. %s: $%.2f\n"+ "3. %s: $%.2f\n"
                 + "-------------------------------\n"+ "GASTO MENSUAL TOTAL: "
                 + "$%.2f\n", 
+                
                 Proyecto1, 
                 gasto1, 
                 Proyecto2, 
